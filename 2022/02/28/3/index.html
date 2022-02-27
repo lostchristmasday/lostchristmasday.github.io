@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">archive_a | Last Christmas-去年圣诞</title>
+  <title itemprop="name">将Hexo博客部署到远程仓库 | Last Christmas-去年圣诞</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -281,91 +281,130 @@
   </div>
 </header>
 
-      <div class="blank" style="padding-top: 75px;">
-</div>
-<div id="content" class="site-content">
-  <div id="main">
-    <header class="page-header">
-      <h1 class="cat-title">
-      归档</h1>
-      <span class="cat-des">
-        <p>
-        Archives</p>
-      </span>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(fm.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="fm.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      将Hexo博客部署到远程仓库</h1>
+      <p class="entry-census">
+        <span>
+          <a href="hojun.cn">
+            <img src="author.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="hojun.cn">Last Christmas</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2022-2-28<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
-    <div id="main-part">
-      <article class="art">
-        <div class="art-main">
-          <div class="art-content">
-            <div id="archives">
-              <p style="text-align:right;">
-                [<span id="al_expand_collapse" style="cursor: s-resize;">
-                全部展开/收缩</span>
-              ]</p>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2022年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      02月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2022/02/28/3/">
-                          <span style="color:#0bf;">
-                          28日00:01:43</span>
-                          将Hexo博客部署到远程仓库
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2022/02/27/2/">
-                          <span style="color:#0bf;">
-                          27日00:34:02</span>
-                          CE找游戏基址
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2022/02/26/1/">
-                          <span style="color:#0bf;">
-                          26日21:34:35</span>
-                          博客重启-也是我的重启
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="前置工作"><a href="#前置工作" class="headerlink" title="前置工作"></a>前置工作</h1><h3 id="1-已经本地博客搭建完毕，即在127-0-0-1本地调试完成"><a href="#1-已经本地博客搭建完毕，即在127-0-0-1本地调试完成" class="headerlink" title="1.已经本地博客搭建完毕，即在127.0.0.1本地调试完成"></a>1.已经本地博客搭建完毕，即在127.0.0.1本地调试完成</h3><p>何为本地完成呢，即输入<code>hexo s</code>时无报错且在本地打开浏览器能正常显示，例如：<br><img data-action="zoom" src="/2022/02/28/3/bendi.png" alt="本地成功图片"><br>即第一步已经完成</p>
+<h3 id="2-已经在Github类完成项目仓库的创建并能与本机进行连接"><a href="#2-已经在Github类完成项目仓库的创建并能与本机进行连接" class="headerlink" title="2.已经在Github类完成项目仓库的创建并能与本机进行连接"></a>2.已经在Github类完成项目仓库的创建并能与本机进行连接</h3><p>仓库创建和本机连接方式自行百度（成长的根源来源于实践）<br><img data-action="zoom" src="/2022/02/28/3/gt.png" alt="github图片"><br>要注意仓库名的设置要XXXXXXXX.github.io（XXXXXXXX代表你的仓库名)</p>
+<h1 id="部署步骤"><a href="#部署步骤" class="headerlink" title="部署步骤"></a>部署步骤</h1><p>首先<code>hexo clean</code>清除本地无用缓存<br><img data-action="zoom" src="/2022/02/28/3/clean.png" alt="clean"></p>
+<p>然后<code>hexo g -d</code>一步到位即可<br><img data-action="zoom" src="/2022/02/28/3/hexog.png" alt="hexogd"></p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>实践得真知，博主在搭建和部署的时候踩过很多坑；有的各种问题报错我有时间另开一文细说，不喜欢多说废话，各种报错在所难免，多用百度。</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="/images/QQ.png"></li>
+                <li class="wechat-code"><img src="/images/wx.png"></li>
+              </ul>
             </div>
           </div>
         </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
       </article>
-    </div>
-  </div>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2022/02/27/2/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="fm.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="fm.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                CE找游戏基址</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+
+
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="hojun.cn" class="profile gravatar"><img src="author.jpg" itemprop="image" alt="Last Christmas" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="hojun.cn" itemprop="url" rel="author">Last Christmas</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>去年圣诞</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
 
     </div>    
     <div class="ins-search">

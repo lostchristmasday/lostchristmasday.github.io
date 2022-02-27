@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2022-02-26T16:44:09.871Z</updated>
+  <updated>2022-02-27T16:21:50.783Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>将Hexo博客部署到远程仓库</title>
+    <link href="/2022/02/28/3/"/>
+    <id>/2022/02/28/3/</id>
+    <published>2022-02-27T16:01:43.000Z</published>
+    <updated>2022-02-27T16:21:50.783Z</updated>
+    
+    <summary type="html">
+    
+      将HEXO博客部署到Github或码云等平台
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="博客" scheme="/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>CE找游戏基址</title>
