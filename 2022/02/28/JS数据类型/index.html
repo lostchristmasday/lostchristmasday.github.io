@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Category: 技术 | Last Christmas-去年圣诞</title>
+  <title itemprop="name">JS数据类型(未完成) | Last Christmas-去年圣诞</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -281,303 +281,212 @@
   </div>
 </header>
 
-      
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img data-src="/images/jishu.jpg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://s3.bmp.ovh/imgs/2022/02/33e8574185d1fb84.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://s3.bmp.ovh/imgs/2022/02/33e8574185d1fb84.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      JS数据类型(未完成)</h1>
+      <p class="entry-census">
+        <span>
+          <a href="lastchristmas.xyz">
+            <img src="author.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="lastchristmas.xyz">Last Christmas</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2022-2-28<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
   </div>
-  <header class="pattern-header ">
-    <h1 class="cat-title">失落圣诞</h1>
-    <span class="cat-des">
-      <p>lost christmas</p>
-    </span>
-  </header>
-</div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h1><h3 id="1-简单的数据类型-Number-String-Boolean-Undefined-Null"><a href="#1-简单的数据类型-Number-String-Boolean-Undefined-Null" class="headerlink" title="1.简单的数据类型(Number,String,Boolean,Undefined,Null)"></a>1.简单的数据类型(Number,String,Boolean,Undefined,Null)</h3><h3 id="2-复杂数据类型-object"><a href="#2-复杂数据类型-object" class="headerlink" title="2.复杂数据类型(object)"></a>2.复杂数据类型(object)</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">简单数据类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Number</td>
+<td style="text-align:center">数字型(整型和浮点型)</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">布尔值,如<code>true</code>、<code>false</code>，等价于1和0</td>
+<td style="text-align:center">false</td>
+</tr>
+<tr>
+<td style="text-align:center">String</td>
+<td style="text-align:center">字符串,JS的字符串都带””引号</td>
+<td style="text-align:center">**</td>
+</tr>
+<tr>
+<td style="text-align:center">Undefined</td>
+<td style="text-align:center">var a;声明变量a但没有赋值,a=undefined</td>
+<td style="text-align:center">undefined</td>
+</tr>
+<tr>
+<td style="text-align:center">Null</td>
+<td style="text-align:center">var a = null;声明了变量a为空格</td>
+<td style="text-align:center">null</td>
+</tr>
+</tbody>
+</table>
+<h6 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h6><p>进制：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">JavaScript中的进制(10进制不谈)</th>
+<th style="text-align:center">写法</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">八进制</td>
+<td style="text-align:center">数字前写0</td>
+<td style="text-align:center">var num = 011;即9(十进制)</td>
+</tr>
+<tr>
+<td style="text-align:center">十六进制</td>
+<td style="text-align:center">数字前写0x</td>
+<td style="text-align:center">var num = 0x1a;即26(十进制)</td>
+</tr>
+</tbody>
+</table>
+<p>可通过<code>log</code>输出数字型的最大值和最小值：<br>最大值：<code>Number.MAX_VALUE</code>,最小值：<code>Number.MIN_VALUE</code></p>
+<p>特殊值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">数值类</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Infinity</td>
+<td style="text-align:center">无穷大，大于任何数</td>
+</tr>
+<tr>
+<td style="text-align:center">-Infinity</td>
+<td style="text-align:center">无穷小，小于任何数</td>
+</tr>
+<tr>
+<td style="text-align:center">NaN，Not a Number</td>
+<td style="text-align:center">代表一个非数值</td>
+</tr>
+</tbody>
+</table>
+<p><code>isNaN</code>判断是否是数字，如果<code>isNaN(a)</code>，其中a确实为数字，返回<code>false</code>,否则返回<code>true</code></p>
+<p>。</p>
+<p>。</p>
+<p>。</p>
+<h1 id="★该文还有部分尚未完成"><a href="#★该文还有部分尚未完成" class="headerlink" title="★该文还有部分尚未完成"></a>★该文还有部分尚未完成</h1>
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="/images/QQ.png"></li>
+                <li class="wechat-code"><img src="/images/wx.png"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2022/02/28/JavaScript/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://s3.bmp.ovh/imgs/2022/02/33e8574185d1fb84.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://s3.bmp.ovh/imgs/2022/02/33e8574185d1fb84.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                JavaScript初步认知</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
       
-  <!-- 首页默认取最最新文章集 -->
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2022/02/28/JS数据类型/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://s3.bmp.ovh/imgs/2022/02/33e8574185d1fb84.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2022/02/28/JS数据类型/">
-    JS数据类型(未完成)</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2022-2-28</div>
-    <p>
-    JavaScript数据类型</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2022/02/28/JS数据类型/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2022/02/28/JavaScript/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://s3.bmp.ovh/imgs/2022/02/33e8574185d1fb84.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2022/02/28/JavaScript/">
-    JavaScript初步认知</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2022-2-28</div>
-    <p>
-    Javascript</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2022/02/28/JavaScript/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2022/02/28/3/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://s3.bmp.ovh/imgs/2022/02/75b9d63e77022db0.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2022/02/28/3/">
-    将Hexo博客部署到远程仓库</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2022-2-28</div>
-    <p>
-    将HEXO博客部署到Github或码云等平台</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2022/02/28/3/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2022/02/27/2/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://s3.bmp.ovh/imgs/2022/02/669eac9948142444.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2022/02/27/2/">
-    CE找游戏基址</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2022-2-27</div>
-    <p>
-    CE系列纯粹为个人学习记录使用，不得用于违法行为。</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2022/02/27/2/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
 
 
-      <div class="clearer">
-      </div>
-    </main>
-    <!--  -->
-    
-  </div>
+
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="lastchristmas.xyz" class="profile gravatar"><img src="author.jpg" itemprop="image" alt="Last Christmas" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="lastchristmas.xyz" itemprop="url" rel="author">Last Christmas</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>去年圣诞</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
 
-<!-- 
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2022/02/28/JS数据类型/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://s3.bmp.ovh/imgs/2022/02/33e8574185d1fb84.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2022/02/28/JS数据类型/">
-    JS数据类型(未完成)</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2022-2-28</div>
-    <p>
-    JavaScript数据类型</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2022/02/28/JS数据类型/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2022/02/28/JavaScript/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://s3.bmp.ovh/imgs/2022/02/33e8574185d1fb84.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2022/02/28/JavaScript/">
-    JavaScript初步认知</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2022-2-28</div>
-    <p>
-    Javascript</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2022/02/28/JavaScript/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2022/02/28/3/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://s3.bmp.ovh/imgs/2022/02/75b9d63e77022db0.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2022/02/28/3/">
-    将Hexo博客部署到远程仓库</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2022-2-28</div>
-    <p>
-    将HEXO博客部署到Github或码云等平台</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2022/02/28/3/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2022/02/27/2/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://s3.bmp.ovh/imgs/2022/02/669eac9948142444.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2022/02/27/2/">
-    CE找游戏基址</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2022-2-27</div>
-    <p>
-    CE系列纯粹为个人学习记录使用，不得用于违法行为。</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2022/02/27/2/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
 
- -->
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>
