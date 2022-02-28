@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Tag: CE | Last Christmas-去年圣诞</title>
+  <title itemprop="name">JavaScript初步认知 | Last Christmas-去年圣诞</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -281,64 +281,230 @@
   </div>
 </header>
 
-      
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="CE.img" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://s3.bmp.ovh/imgs/2022/02/33e8574185d1fb84.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://s3.bmp.ovh/imgs/2022/02/33e8574185d1fb84.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      JavaScript初步认知</h1>
+      <p class="entry-census">
+        <span>
+          <a href="lastchristmas.xyz">
+            <img src="author.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="lastchristmas.xyz">Last Christmas</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2022-2-28<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
   </div>
-  <header class="pattern-header ">
-    <h1 class="cat-title">CE</h1>
-  </header>
-</div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      
-  <!-- 首页默认取最最新文章集 -->
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2022/02/27/2/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="JavaScript书写位置和注释"><a href="#JavaScript书写位置和注释" class="headerlink" title="JavaScript书写位置和注释"></a>JavaScript书写位置和注释</h1><h4 id="书写位置：分为行内、内嵌、外部："><a href="#书写位置：分为行内、内嵌、外部：" class="headerlink" title="书写位置：分为行内、内嵌、外部："></a>书写位置：分为行内、内嵌、外部：</h4><pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script src=&quot;XXX.js&quot;&gt;&lt;/script&gt;     &lt;!--引用外部文件--&gt;
+    &lt;!--内嵌写这里 --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!--行内写这里--&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4 id="单行注释和多行注释"><a href="#单行注释和多行注释" class="headerlink" title="单行注释和多行注释"></a>单行注释和多行注释</h4><p>单行注释：快捷键<code>Crtl+/</code></p>
+<pre><code class="html">//这是一条注释
+</code></pre>
+<p>多行注释：1.快捷键<code>Ctrl+Alt+a</code> </p>
+<pre><code class="html">/*这是多行注释的第一行
+这是多行注释的第二行*/
+</code></pre>
+<h1 id="JavaScript输入输出语句"><a href="#JavaScript输入输出语句" class="headerlink" title="JavaScript输入输出语句"></a>JavaScript输入输出语句</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">归属</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">alert(msg)</td>
+<td style="text-align:center">浏览器弹出警示框</td>
+<td style="text-align:center">浏览器</td>
+</tr>
+<tr>
+<td style="text-align:center">console.log(msg)</td>
+<td style="text-align:center">浏览器控制台打印输出信息</td>
+<td style="text-align:center">浏览器</td>
+</tr>
+<tr>
+<td style="text-align:center">prompt(info)</td>
+<td style="text-align:center">浏览器弹出输出框，用户可以输入</td>
+<td style="text-align:center">浏览器</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="javascript">    prompt(&quot;Input your age:&quot;);       //在网页中弹出输出框，意为输入年龄
+    alert(&quot;Your age is:&quot;)       //弹出信息框，意为你的年龄是：
+    console.log(&quot;只有我能看到的:&quot;)  //用于调试，在审查元素的Console内查看
+</code></pre>
+<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p>在内存中申请一块来存放数据</p>
+<h4 id="变量使用"><a href="#变量使用" class="headerlink" title="变量使用"></a>变量使用</h4><h6 id="1-声明变量"><a href="#1-声明变量" class="headerlink" title="1.声明变量"></a>1.声明变量</h6><pre><code class="javascript">//声明变量
+var age;//声明一个名称为age的变量
+</code></pre>
+<p><code>var</code>是一个JS关键字，用来声明变量(variable)，计算机自动分配变量内存空间，不需要人为操作<br><code>age</code>是’我’人为定义的变量名，需要通过变量名来访问内存分配空间</p>
+<h6 id="2-赋值输出"><a href="#2-赋值输出" class="headerlink" title="2.赋值输出"></a>2.赋值输出</h6><pre><code class="javascript">var age;
+age = 21; //给age赋值21
+console.log(age); //进入检查，通常是F12在Console可调试查询
+</code></pre>
+<p><code>=</code>用来把右边的赋值给左边的变量空间，代表赋值</p>
+<h6 id="3-变量的初始化"><a href="#3-变量的初始化" class="headerlink" title="3.变量的初始化"></a>3.变量的初始化</h6><pre><code class="javascript">var age = 21;  //一步到位声明age为21的变量
+</code></pre>
+<h6 id="4-简单输入输出变量案例"><a href="#4-简单输入输出变量案例" class="headerlink" title="4.简单输入输出变量案例"></a>4.简单输入输出变量案例</h6><pre><code class="javascript">var myname = prompt(&quot;Input your name&quot;);//用户输入一个myname变量
+alert(myname);//输出变量
+</code></pre>
+<h4 id="变量语法扩展"><a href="#变量语法扩展" class="headerlink" title="变量语法扩展"></a>变量语法扩展</h4><h6 id="1-一次性声明多个变量：用逗号隔开，分号结尾"><a href="#1-一次性声明多个变量：用逗号隔开，分号结尾" class="headerlink" title="1.一次性声明多个变量：用逗号隔开，分号结尾"></a>1.一次性声明多个变量：用逗号隔开，分号结尾</h6><pre><code class="javascript">var age=21,
+    address=&#39;xuzhou&#39;,
+    live-money=1600;
+</code></pre>
+<h6 id="2-声明变量的特殊情况"><a href="#2-声明变量的特殊情况" class="headerlink" title="2.声明变量的特殊情况"></a>2.声明变量的特殊情况</h6><table>
+<thead>
+<tr>
+<th style="text-align:center">情况</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">var age;console.log(age);</td>
+<td style="text-align:center">只声明 不赋值</td>
+<td style="text-align:center">undefined</td>
+</tr>
+<tr>
+<td style="text-align:center">console.log(age);</td>
+<td style="text-align:center">不声明 不赋值 直接调试引用</td>
+<td style="text-align:center">报错Error</td>
+</tr>
+<tr>
+<td style="text-align:center">age=10;console.log(age)</td>
+<td style="text-align:center">不声明 只赋值</td>
+<td style="text-align:center">10</td>
+</tr>
+</tbody>
+</table>
+<h4 id="变量命名规范"><a href="#变量命名规范" class="headerlink" title="变量命名规范"></a>变量命名规范</h4><ul>
+<li>由字母(A-Za-z)、数字(0-9)、下划线_、美元符号$组成，如:userName,$money</li>
+<li>严格区分大小写,<code>Name</code>和<code>name</code>是两个变量</li>
+<li>不能以数字开头,<code>21Name</code>这种是错误的</li>
+<li>不能是关键字、保留字,如:<code>var</code>、<code>for</code>、<code>while</code></li>
+<li>首字母小写,后面字母大写,如:<code>myLastChristmas</code></li>
+</ul>
+
         </div>
-        <img width="150" height="150" src="https://s3.bmp.ovh/imgs/2022/02/669eac9948142444.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2022/02/27/2/">
-    CE找游戏基址</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2022-2-27</div>
-    <p>
-    CE系列纯粹为个人学习记录使用，不得用于违法行为。</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2022/02/27/2/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="/images/QQ.png"></li>
+                <li class="wechat-code"><img src="/images/wx.png"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2022/02/28/3/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://s3.bmp.ovh/imgs/2022/02/75b9d63e77022db0.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://s3.bmp.ovh/imgs/2022/02/75b9d63e77022db0.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                将Hexo博客部署到远程仓库</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
 
 
-      <div class="clearer">
-      </div>
-    </main>
-    <!--  -->
-    
-  </div>
+
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="lastchristmas.xyz" class="profile gravatar"><img src="author.jpg" itemprop="image" alt="Last Christmas" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="lastchristmas.xyz" itemprop="url" rel="author">Last Christmas</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>去年圣诞</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>
