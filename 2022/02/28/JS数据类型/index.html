@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">JS数据类型(未完成) | Last Christmas-去年圣诞</title>
+  <title itemprop="name">JS数据类型(已完成) | Last Christmas-去年圣诞</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -291,7 +291,7 @@
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      JS数据类型(未完成)</h1>
+      JS数据类型(已完成)</h1>
       <p class="entry-census">
         <span>
           <a href="lastchristmas.xyz">
@@ -317,7 +317,7 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h1><h3 id="1-简单的数据类型-Number-String-Boolean-Undefined-Null"><a href="#1-简单的数据类型-Number-String-Boolean-Undefined-Null" class="headerlink" title="1.简单的数据类型(Number,String,Boolean,Undefined,Null)"></a>1.简单的数据类型(Number,String,Boolean,Undefined,Null)</h3><h3 id="2-复杂数据类型-object"><a href="#2-复杂数据类型-object" class="headerlink" title="2.复杂数据类型(object)"></a>2.复杂数据类型(object)</h3><table>
+          <h1 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h1><h3 id="1-简单的数据类型-Number-String-Boolean-Undefined-Null"><a href="#1-简单的数据类型-Number-String-Boolean-Undefined-Null" class="headerlink" title="1.简单的数据类型(Number,String,Boolean,Undefined,Null)"></a>1.简单的数据类型(Number,String,Boolean,Undefined,Null)</h3><h3 id="2-复杂数据类型-object"><a href="#2-复杂数据类型-object" class="headerlink" title="2.复杂数据类型(object)"></a>2.复杂数据类型(object)</h3><h3 id="3-用Typeof判断数据类型"><a href="#3-用Typeof判断数据类型" class="headerlink" title="3.用Typeof判断数据类型"></a>3.用Typeof判断数据类型</h3><table>
 <thead>
 <tr>
 <th style="text-align:center">简单数据类型</th>
@@ -400,10 +400,72 @@
 </tbody>
 </table>
 <p><code>isNaN</code>判断是否是数字，如果<code>isNaN(a)</code>，其中a确实为数字，返回<code>false</code>,否则返回<code>true</code></p>
-<p>。</p>
-<p>。</p>
-<p>。</p>
-<h1 id="★该文还有部分尚未完成"><a href="#★该文还有部分尚未完成" class="headerlink" title="★该文还有部分尚未完成"></a>★该文还有部分尚未完成</h1>
+<h6 id="String字符串"><a href="#String字符串" class="headerlink" title="String字符串"></a>String字符串</h6><table>
+<thead>
+<tr>
+<th style="text-align:center">字符串转义符</th>
+<th style="text-align:center">解释说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">\n</td>
+<td style="text-align:center">换行符号</td>
+</tr>
+<tr>
+<td style="text-align:center">\ \</td>
+<td style="text-align:center">斜杠\</td>
+</tr>
+<tr>
+<td style="text-align:center">\ ‘</td>
+<td style="text-align:center">‘单引号</td>
+</tr>
+<tr>
+<td style="text-align:center">\ ‘’</td>
+<td style="text-align:center">‘’双引号</td>
+</tr>
+<tr>
+<td style="text-align:center">\t</td>
+<td style="text-align:center">tab 缩进</td>
+</tr>
+<tr>
+<td style="text-align:center">\b</td>
+<td style="text-align:center">空格，blank的意思</td>
+</tr>
+</tbody>
+</table>
+<p>.字符串长度：</p>
+<pre><code class="javascript"> var str = &#39;lastchristmas&#39;;
+console.log(str.length);//输出字符串长度
+</code></pre>
+<p>2.1字符串拼接<br><code>字符串</code>+<code>任何类型</code>=<code>拼接后的字符串</code></p>
+<pre><code class="javascript">console.log(&#39;11&#39; + 5);//115
+console.log(11 + 5);//16
+console.log(&#39;hello&#39; + &#39; &#39; + &#39;world&#39;);//hello world
+</code></pre>
+<p>2.2字符串拼接<br>已设置变量的字符串拼接</p>
+<pre><code class="javascript">var age = 21;
+console.log（&#39;lastchristmas is&#39; + age &#39;years&#39;）;//去年圣诞21岁
+</code></pre>
+<p>3.案例<br>输入一个数字代表你的年龄，弹出窗口输出你的年龄</p>
+<pre><code class="javascript">var age = prompt(&#39;Enter your age:&#39;);
+var str = &#39;Your age is&#39; + age;
+alert(str);
+</code></pre>
+<h6 id="boolean-undefined-null"><a href="#boolean-undefined-null" class="headerlink" title="boolean,undefined,null"></a>boolean,undefined,null</h6><pre><code class="javascript">var a = true;
+var b = flase;
+console.log(a + 1)// 2
+console.log(b + 1)// 1
+
+var str = undefined;
+console.log(str + apple)//undefinedapple
+console.log(str + 10)//NaN
+
+var x = null;
+console.log(x + apple)//nullapple
+console.log(x + 10)//10
+</code></pre>
+
         </div>
         <!-- .entry-content -->
         <div class="single-reward">
