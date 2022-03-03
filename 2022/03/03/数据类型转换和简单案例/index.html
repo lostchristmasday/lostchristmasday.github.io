@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">数据类型转换和简单案例(未完成) | Last Christmas-去年圣诞</title>
+  <title itemprop="name">数据类型转换和简单案例(理论完结) | Last Christmas-去年圣诞</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -291,7 +291,7 @@
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      数据类型转换和简单案例(未完成)</h1>
+      数据类型转换和简单案例(理论完结)</h1>
       <p class="entry-census">
         <span>
           <a href="www.lastchristmas.xyz">
@@ -317,7 +317,41 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h1><h1 id="简单案例"><a href="#简单案例" class="headerlink" title="简单案例"></a>简单案例</h1>
+          <h1 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h1><h6 id="转换为数字型"><a href="#转换为数字型" class="headerlink" title="转换为数字型"></a>转换为数字型</h6><table>
+<thead>
+<tr>
+<th>方式</th>
+<th>说明</th>
+<th>案例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>parselnt(string)函数</td>
+<td>将string转化成整数数值型</td>
+<td>parselnt(‘78’)</td>
+</tr>
+<tr>
+<td>parseFloat(string)函数</td>
+<td>将string类型转化成浮点数数值型</td>
+<td>parseFloat(78.21’’)</td>
+</tr>
+<tr>
+<td>Number()强制转换</td>
+<td>将string类型转换为数值型</td>
+<td>Number(‘12’)</td>
+</tr>
+</tbody>
+</table>
+<p><code>parselnt</code>如果里面是浮点数，直接取整；如果后面是字母，会直接去掉单位或字母</p>
+<h6 id="转为boolean"><a href="#转为boolean" class="headerlink" title="转为boolean"></a>转为boolean</h6><p>未定义、为空的值都转化为flase,其余为true</p>
+<h1 id="简单案例"><a href="#简单案例" class="headerlink" title="简单案例"></a>简单案例</h1><p><strong>输入出生年份，浏览器输出今年多大</strong></p>
+<pre><code class="javascript">var year = 2022;
+var age = prompt(&#39;Enter your birth year&#39;);
+trueAge = 2022 - age;
+alert(&#39;You are &#39; + trueAge + &#39; years old&#39;)
+</code></pre>
+
         </div>
         <!-- .entry-content -->
         <div class="single-reward">
