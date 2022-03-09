@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">数据类型转换和简单案例(理论完结) | Last Christmas-去年圣诞</title>
+  <title itemprop="name">JS对象方法 | Last Christmas-去年圣诞</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -287,23 +287,23 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://s3.bmp.ovh/imgs/2022/03/7ac05b3d9d32e559.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://s3.bmp.ovh/imgs/2022/03/7ac05b3d9d32e559.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://s3.bmp.ovh/imgs/2022/03/2b9c5c7fb67f82b8.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://s3.bmp.ovh/imgs/2022/03/2b9c5c7fb67f82b8.jpg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      数据类型转换和简单案例(理论完结)</h1>
+      JS对象方法</h1>
       <p class="entry-census">
         <span>
-          <a href="www.lastchristmas.xyz">
+          <a href="lastchristmas.xyz">
             <img src="https://s3.bmp.ovh/imgs/2022/02/93bc65b17c34a365.jpg">
           </a>
         </span>
         <span>
-          <a href="www.lastchristmas.xyz">Last Christmas</a>
+          <a href="lastchristmas.xyz">Last Christmas</a>
         </span>
         <span class="bull">
         ·</span>
-        2022-3-3<span class="bull">
+        2022-3-9<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -317,39 +317,70 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h1><h6 id="转换为数字型"><a href="#转换为数字型" class="headerlink" title="转换为数字型"></a>转换为数字型</h6><table>
+          <h1 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h1><table>
 <thead>
 <tr>
-<th>方式</th>
-<th>说明</th>
-<th>案例</th>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">含义</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>parselnt(string)函数</td>
-<td>将string转化成整数数值型</td>
-<td>parselnt(‘78’)</td>
+<td style="text-align:center">Math.PI</td>
+<td style="text-align:center">圆周率</td>
 </tr>
 <tr>
-<td>parseFloat(string)函数</td>
-<td>将string类型转化成浮点数数值型</td>
-<td>parseFloat(78.21’’)</td>
+<td style="text-align:center">Math.floor()</td>
+<td style="text-align:center">向下取整，1.9取1</td>
 </tr>
 <tr>
-<td>Number()强制转换</td>
-<td>将string类型转换为数值型</td>
-<td>Number(‘12’)</td>
+<td style="text-align:center">Math.ceil()</td>
+<td style="text-align:center">向上取整，2.1取3</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.round()</td>
+<td style="text-align:center">四舍五入，注：-1.5  结果为-1</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.abs()</td>
+<td style="text-align:center">绝对值，字符串型转为数字型</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.max/Math.min</td>
+<td style="text-align:center">最大值和最小值</td>
 </tr>
 </tbody>
 </table>
-<p><code>parselnt</code>如果里面是浮点数，直接取整；如果后面是字母，会直接去掉单位或字母</p>
-<h6 id="转为boolean"><a href="#转为boolean" class="headerlink" title="转为boolean"></a>转为boolean</h6><p>未定义、为空的值都转化为flase,其余为true</p>
-<h1 id="简单案例"><a href="#简单案例" class="headerlink" title="简单案例"></a>简单案例</h1><p><strong>输入出生年份，浏览器输出今年多大</strong></p>
-<pre><code class="javascript">var year = 2022;
-var age = prompt(&#39;Enter your birth year&#39;);
-trueAge = 2022 - age;
-alert(&#39;You are &#39; + trueAge + &#39; years old&#39;)
+<h4 id="随机数：random"><a href="#随机数：random" class="headerlink" title="随机数：random()"></a>随机数：<code>random()</code></h4><h6 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h6><p><code>Math.random()</code> 函数返回一个浮点数,  伪随机数在范围从<strong>0到</strong>小于<strong>1</strong>，也就是说，从0（包括0）往上，但是<strong>不包括</strong>1（排除1），然后您可以缩放到所需的范围。实现将初始种子选择到随机数生成算法;它不能被用户选择或重置。</p>
+<h6 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h6><p>这个例子返回了一个在指定值之间的随机整数。这个值不小于 <code>min</code> （如果 <code>min</code> 不是整数，则不小于 <code>min</code> 的向上取整数），且小于（不等于）<code>max</code>。</p>
+<pre><code class="javascript">function getRandomIntNumber(min,max){
+    min = Math.ceil(min)
+    max = Math.floor(max)
+    return Math.floor(Math.random() * (max - min + 1)) + min //含最大值，含最小值
+}
+</code></pre>
+<h6 id="例题："><a href="#例题：" class="headerlink" title="例题："></a>例题：</h6><p><img data-action="zoom" src="/2022/03/09/Math方法/timu.png" alt></p>
+<pre><code class="javascript">function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min; //不含最大值，含最小值
+        }
+        var b = getRandomInt(1, 10)
+        document.title = b
+
+        while (1) {
+            var a = prompt()
+            if (a &lt; b) {
+                alert(&quot;数字小了，继续猜&quot;)
+                continue
+            } else if (a &gt; b) {
+                alert(&quot;数字大了，继续猜&quot;)
+                continue
+            } else {
+                alert(&quot;猜对了&quot;)
+                break
+            }
+        }
 </code></pre>
 
         </div>
@@ -379,36 +410,19 @@ alert(&#39;You are &#39; + trueAge + &#39; years old&#39;)
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
-          
-            <div class="post-nepre half previous">
-          
-            <a href="/2022/03/09/Math方法/" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://s3.bmp.ovh/imgs/2022/03/2b9c5c7fb67f82b8.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://s3.bmp.ovh/imgs/2022/03/2b9c5c7fb67f82b8.jpg">
-              </div>
-              <span class="label">
-              Previous Post</span>
-              <div class="info">
-                <h3>
-                JS对象方法</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
         
           
-            <div class="post-nepre half next">
+            <div class="post-nepre full next">
           
-            <a href="/2022/02/28/JS数据类型/" rel="next">
+            <a href="/2022/03/03/数据类型转换和简单案例/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://s3.bmp.ovh/imgs/2022/02/33e8574185d1fb84.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://s3.bmp.ovh/imgs/2022/02/33e8574185d1fb84.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://s3.bmp.ovh/imgs/2022/03/7ac05b3d9d32e559.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://s3.bmp.ovh/imgs/2022/03/7ac05b3d9d32e559.jpg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                JS数据类型(已完成)</h3>
+                数据类型转换和简单案例(理论完结)</h3>
                 <hr>
               </div>
             </a>
@@ -435,11 +449,11 @@ alert(&#39;You are &#39; + trueAge + &#39; years old&#39;)
 
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="www.lastchristmas.xyz" class="profile gravatar"><img src="https://s3.bmp.ovh/imgs/2022/02/93bc65b17c34a365.jpg" itemprop="image" alt="Last Christmas" height="70" width="70"></a>
+          <a href="lastchristmas.xyz" class="profile gravatar"><img src="https://s3.bmp.ovh/imgs/2022/02/93bc65b17c34a365.jpg" itemprop="image" alt="Last Christmas" height="70" width="70"></a>
           <div class="meta">
             <span class="title">Author</span>
             <h3 itemprop="name">
-            <a href="www.lastchristmas.xyz" itemprop="url" rel="author">Last Christmas</a>
+            <a href="lastchristmas.xyz" itemprop="url" rel="author">Last Christmas</a>
             </h3>
           </div>
         </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2022-03-03T14:02:10.950Z</updated>
+  <updated>2022-03-09T05:12:20.295Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS对象方法</title>
+    <link href="/2022/03/09/Math%E6%96%B9%E6%B3%95/"/>
+    <id>/2022/03/09/Math方法/</id>
+    <published>2022-03-09T03:34:01.000Z</published>
+    <updated>2022-03-09T05:12:20.295Z</updated>
+    
+    <summary type="html">
+    
+      JS的方法
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="JS理论" scheme="/tags/JS%E7%90%86%E8%AE%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>数据类型转换和简单案例(理论完结)</title>
