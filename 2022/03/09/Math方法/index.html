@@ -560,6 +560,87 @@ for(var i = 0; i&lt;oldArr.length; i++){
 }
 console.log(clearMoreDisplay())
 </code></pre>
+<h6 id="数组转为字符串"><a href="#数组转为字符串" class="headerlink" title="数组转为字符串"></a>数组转为字符串</h6><p><code>arr.toString()</code>和<code>arr.jion()</code></p>
+<h1 id="字符串对象"><a href="#字符串对象" class="headerlink" title="字符串对象"></a>字符串对象</h1><h4 id="字符串字符返回位置"><a href="#字符串字符返回位置" class="headerlink" title="字符串字符返回位置"></a>字符串字符返回位置</h4><pre><code class="javascript">var str = &#39;Hello Hello&#39;
+console.log(str.indexOf(&#39;e&#39;))   //输出1
+console.log(str.indexOf(&#39;e&#39;,4)) //从第4个开始输出 未找到返回-1
+</code></pre>
+<h6 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h6><p>查找字符串”jnvkshgbjsbujxnakdjfjdjdfjakjfkd”中所有 j 出现的位置和次数</p>
+<pre><code class="JavaScript">    var str = &quot;jnvkshgbjsbujxnakdjfjdjdfjakjfkd&quot;
+    var countNums = 0
+    function countTimes(){
+            for (var i = 0; i &lt; str.length; i++){
+                while(str.indexOf(&#39;j&#39;,i) != -1){
+                    console.log(str.indexOf(&#39;j&#39;,i))
+                    i = str.indexOf(&#39;j&#39;,i)  //保证了下次循环从索引到的数值开始，不然总数会一直+1
+                    countNums++
+                    break
+                }
+            }
+        console.log(&#39;j出现的总次数：&#39; + countNums);
+    }
+    countTimes()
+</code></pre>
+<h4 id="字符串位置返回字符"><a href="#字符串位置返回字符" class="headerlink" title="字符串位置返回字符"></a>字符串位置返回字符</h4><pre><code class="javascript">var = &#39;cat&#39;
+console.log(str.charAt(2)) //输出t
+
+//因此，有遍历法2
+for (var i = 0; i &lt; str.length; i++){
+    console.log(str.charAt(i))
+}
+</code></pre>
+<h6 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h6><table>
+<thead>
+<tr>
+<th style="text-align:center">方法名</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">使用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">charAt(index)</td>
+<td style="text-align:center">返回指定位置字符</td>
+<td style="text-align:center">str.charAt(0)</td>
+</tr>
+<tr>
+<td style="text-align:center">charCodeAt(index)</td>
+<td style="text-align:center">获取指定位置字符ASCII码</td>
+<td style="text-align:center">str.charCodeAt(0)</td>
+</tr>
+<tr>
+<td style="text-align:center">str[index]</td>
+<td style="text-align:center">获取指定位置字符</td>
+<td style="text-align:center">HTML5,IE8+支持,和第一个一样</td>
+</tr>
+</tbody>
+</table>
+<h6 id="案例-1"><a href="#案例-1" class="headerlink" title="案例"></a>案例</h6><p>判断字符串”jnvkshgbjsbujxnakdjfjdjdfjakjfkd”出现次数最多的字符并统计次数</p>
+<pre><code class="JavaScript">    var str = &quot;jnvkshgbjsbujxnakdjfjdjdfjakjfkd&quot;
+    var max = 0
+    var lastChar = &#39;&#39;
+    var countNums = {
+
+    }
+    function mostAppearNumber() {
+        for (var i = 0; i &lt; str.length; i++){
+            var chars = str.charAt(i)
+            if(countNums[chars]) {
+                countNums[chars]++
+            } else {
+                countNums[chars] = 1
+            }
+        }
+        for (var k in countNums){   //K是属性名，obj[k]是属性值
+            if( countNums[k] &gt; max ){
+                max = countNums[k]
+                lastChar = k
+            }
+        }
+        console.log(&#39;最多的是:&#39;+ lastChar + &#39;出现了&#39; + max +&#39;次&#39;);
+    }
+    mostAppearNumber()
+</code></pre>
 
         </div>
         <!-- .entry-content -->
