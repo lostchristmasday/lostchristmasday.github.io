@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Last Christmas-去年圣诞</title>
+  <title itemprop="name">OpenCV+Python图像处理入门 | Last Christmas-去年圣诞</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -281,449 +281,174 @@
   </div>
 </header>
 
-      <div class="blank" style="padding-top: 0px;"></div>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://s3.bmp.ovh/imgs/2022/03/bceb64443e1ac2cc.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://s3.bmp.ovh/imgs/2022/03/bceb64443e1ac2cc.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      OpenCV+Python图像处理入门</h1>
+      <p class="entry-census">
+        <span>
+          <a href="lastchristmas.xyz">
+            <img src="https://s3.bmp.ovh/imgs/2022/02/93bc65b17c34a365.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="lastchristmas.xyz">Last Christmas</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2022-3-14<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
 <div id="content" class="site-content">
-  
-  <div class="notice" style="margin-top:60px">
-    <i class="iconfont icon-notification">
-    </i>
-    <div class="notice-content">Last christmas,I give you my hreat,but very next day you give it away....</div>
-  </div>
-  
-  <div class="top-feature-row">
-  <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;">
-  <i class="fa fa-anchor" aria-hidden="true">
-  </i>
-  START:DASH!!</h1>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="https://github.com/JamZhemge/cdn" target="_blank">
-        <div class="img">
-          <img src="/images/gt.jpg">
-        </div>
-        <div class="info">
-          <h3>Github</h3>
-          <p>博主的Github</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="mailto:fortech@foxmail.com" target="_blank">
-        <div class="img">
-          <img src="/images/mail.jpg">
-        </div>
-        <div class="info">
-          <h3>email</h3>
-          <p>博主的邮箱:2170066555@qq.com</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2170066555&amp;site=qq&amp;menu=yes&amp;from=message&amp;isappinstalled=0" target="_blank">
-        <div class="img">
-          <img src="/images/wsw.jpg">
-        </div>
-        <div class="info">
-          <h3>Last Christmas的万事屋</h3>
-          <p>技术服务</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-</div>
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      <h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;">
-      <i class="fa fa-envira" aria-hidden="true"></i>
-      Discovery</h1>
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="图像的基本操作"><a href="#图像的基本操作" class="headerlink" title="图像的基本操作"></a>图像的基本操作</h1><h4 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h4><p>此处不会可以问我，环境配置坑较多，下载的国内源，pip版本，python版本都有不同要求，这里不详细说明。</p>
+<h4 id="图像引入输出"><a href="#图像引入输出" class="headerlink" title="图像引入输出"></a>图像引入输出</h4><pre><code class="python">import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+img=cv2.imread(&#39;2023.jpg&#39;)  #导入图像
+
+&#39;&#39;&#39;
+cv2.imshow(&#39;image&#39;,img)  #图像的显示操作
+cv2.waitKey(0)  #值为0代表按任意键退出图像显示
+cv2.destroyAllWindows()  #销毁所有窗口
+&#39;&#39;&#39;
+
+#如果每次都输入一大坨肯定会累，可以定义为一个cv_show的函数
+def cv_show(name,img):
+    cv2.imshow(name,img)
+    cv2.waitKey(0)
+    print(img.shape)  #读取三值
+    cv2.destroyAllWindows()
+
+cv_show(&#39;2023.jpg&#39;,img)
+</code></pre>
+<p><img data-action="zoom" src="/2022/03/14/OpenCV-Python图像处理入门/1.png" alt></p>
+<h4 id="灰度图像和彩色图像读取"><a href="#灰度图像和彩色图像读取" class="headerlink" title="灰度图像和彩色图像读取"></a>灰度图像和彩色图像读取</h4><p>灰度图像读取：<code>cv2.IMREAD_COLOR</code><br>彩色图像读取：<code>cv2.IMREAD_GRAYSCALE</code></p>
+<pre><code class="python">img=cv2.imread(&#39;2023.jpg&#39;,cv2.IMREAD_GRAYSCALE)  #导入图像操作时设置灰度图像即可
+</code></pre>
+<p>灰色图像的shape，只有H和W，没有C</p>
+<p><img data-action="zoom" src="/2022/03/14/OpenCV-Python图像处理入门/2.png" alt></p>
+<h1 id="视频的基本操作"><a href="#视频的基本操作" class="headerlink" title="视频的基本操作"></a>视频的基本操作</h1><pre><code class="python">import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+
+vc = cv2.VideoCapture(&#39;janpan.mp4&#39;)
+if vc.isOpened(): #先判断能不能打开，相当于先读一帧，能读就继续下一帧
+    open, frame = vc.read()  #当前这一帧的图像
+else:
+    open = flase
+
+while open: #遍历每一帧，有多少能读的读多少
+    ret, frame = vc.read()
+    if frame is None: #如果为空，就代表读完了，就要结束
+        break
+    if ret == True:  #相当于判断读的帧没有毛病
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) #把当前帧图像传进来，变为灰度图
+        cv2.imshow(&#39;result&#39;,gray)
+        if cv2.waitKey(10) &amp; 0xFF == 27:  #这个27是我设置的，相当于按退出键可以直接推出视频
+            break
+vc.release()
+cv2.destroyAllWindows()
+</code></pre>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="/images/QQ.png"></li>
+                <li class="wechat-code"><img src="/images/wx.png"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2022/03/12/JS分时访问案例/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                JS案例</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
       
-  <!-- 首页默认取最最新文章集 -->
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
 
-  <div class="post-thumb">
-    <a href="/2022/03/14/OpenCV-Python图像处理入门/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://s3.bmp.ovh/imgs/2022/03/bceb64443e1ac2cc.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-3-14 15:03</div>
-      <a href="/2022/03/14/OpenCV-Python图像处理入门/" class="post-title">
-        <h3>OpenCV+Python图像处理入门</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/Python/">Python<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>Python图像处理</p>
-        <div class="post-bottom">
-          <a href="/2022/03/14/OpenCV-Python图像处理入门/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
+
+
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="lastchristmas.xyz" class="profile gravatar"><img src="https://s3.bmp.ovh/imgs/2022/02/93bc65b17c34a365.jpg" itemprop="image" alt="Last Christmas" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="lastchristmas.xyz" itemprop="url" rel="author">Last Christmas</a>
+            </h3>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/03/12/JS分时访问案例/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/image-404.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-3-12 11:03</div>
-      <a href="/2022/03/12/JS分时访问案例/" class="post-title">
-        <h3>JS案例</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/案例/">案例<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>JS大前端案例</p>
-        <div class="post-bottom">
-          <a href="/2022/03/12/JS分时访问案例/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/03/09/Math方法/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://s3.bmp.ovh/imgs/2022/03/2b9c5c7fb67f82b8.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-3-9 11:03</div>
-      <a href="/2022/03/09/Math方法/" class="post-title">
-        <h3>JS对象方法</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/JS理论/">JS理论<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>JS的方法</p>
-        <div class="post-bottom">
-          <a href="/2022/03/09/Math方法/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/03/03/数据类型转换和简单案例/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://s3.bmp.ovh/imgs/2022/03/7ac05b3d9d32e559.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-3-3 21:03</div>
-      <a href="/2022/03/03/数据类型转换和简单案例/" class="post-title">
-        <h3>数据类型转换和简单案例(理论完结)</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/JS理论/">JS理论<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>JS数据类型转换和一点非常基础的案例</p>
-        <div class="post-bottom">
-          <a href="/2022/03/03/数据类型转换和简单案例/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/02/28/JS数据类型/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://s3.bmp.ovh/imgs/2022/02/33e8574185d1fb84.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-2-28 15:02</div>
-      <a href="/2022/02/28/JS数据类型/" class="post-title">
-        <h3>JS数据类型(已完成)</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/JS理论/">JS理论<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>JavaScript数据类型</p>
-        <div class="post-bottom">
-          <a href="/2022/02/28/JS数据类型/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/02/28/JavaScript/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://s3.bmp.ovh/imgs/2022/02/33e8574185d1fb84.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-2-28 08:02</div>
-      <a href="/2022/02/28/JavaScript/" class="post-title">
-        <h3>JavaScript初步认知</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/JS理论/">JS理论<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>Javascript</p>
-        <div class="post-bottom">
-          <a href="/2022/02/28/JavaScript/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/02/28/3/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://s3.bmp.ovh/imgs/2022/02/75b9d63e77022db0.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-2-28 00:02</div>
-      <a href="/2022/02/28/3/" class="post-title">
-        <h3>将Hexo博客部署到远程仓库</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/博客/">博客<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>将HEXO博客部署到Github或码云等平台</p>
-        <div class="post-bottom">
-          <a href="/2022/02/28/3/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/02/27/2/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://s3.bmp.ovh/imgs/2022/02/669eac9948142444.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-2-27 00:02</div>
-      <a href="/2022/02/27/2/" class="post-title">
-        <h3>CE找游戏基址</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/CE/">CE<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>CE系列纯粹为个人学习记录使用，不得用于违法行为。</p>
-        <div class="post-bottom">
-          <a href="/2022/02/27/2/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/02/26/1/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="fm.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-2-26 21:02</div>
-      <a href="/2022/02/26/1/" class="post-title">
-        <h3>博客重启-也是我的重启</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/随笔/">随笔<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/随想/">随想</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>讲讲我博客的来龙去脉</p>
-        <div class="post-bottom">
-          <a href="/2022/02/26/1/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-
-
-    </main>
-      <!-- 首页默认取最最新文章集 -->
-    <!--  -->
-  </div>
-  
+        <hr>
+        <p><i class="iconfont icon-write"></i>去年圣诞</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
 
     </div>    
     <div class="ins-search">

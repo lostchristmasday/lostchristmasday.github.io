@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2022-03-12T04:06:00.104Z</updated>
+  <updated>2022-03-14T08:26:11.247Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OpenCV+Python图像处理入门</title>
+    <link href="/2022/03/14/OpenCV-Python%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E5%85%A5%E9%97%A8/"/>
+    <id>/2022/03/14/OpenCV-Python图像处理入门/</id>
+    <published>2022-03-14T07:41:47.000Z</published>
+    <updated>2022-03-14T08:26:11.247Z</updated>
+    
+    <summary type="html">
+    
+      Python图像处理
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Python" scheme="/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>JS案例</title>
