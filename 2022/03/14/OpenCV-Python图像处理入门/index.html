@@ -366,6 +366,17 @@ while open: #遍历每一帧，有多少能读的读多少
 vc.release()
 cv2.destroyAllWindows()
 </code></pre>
+<h1 id="plt显示图像"><a href="#plt显示图像" class="headerlink" title="plt显示图像"></a>plt显示图像</h1><pre><code class="python">import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+
+#1 读取图像
+img = cv2.imread(&#39;2024.jpg&#39;)
+
+#2 显示图像
+plt.imshow(img[:,:,::-1])  #由于opencv显示图像是bgr模式，因此plt显示将其倒转
+plt.show()
+</code></pre>
 
         </div>
         <!-- .entry-content -->
